@@ -46,7 +46,8 @@ class StoreController extends Controller
      */
     public function show(Store $store)
     {
-        //
+        $stores = Store::all();
+        return view("/Store/Main", compact(["stores"]));
     }
 
     /**
